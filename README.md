@@ -59,3 +59,12 @@ Production ready and dev files are placed inside the 'build' folder
 ```
 grunt build-dev
 ```
+
+<br/>
+
+**Live reload**
+Launch browserSync to test simultaneously on different devices
+
+```
+grunt live
+```

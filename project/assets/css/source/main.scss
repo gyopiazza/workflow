@@ -10,6 +10,10 @@
 // 	ok: ok;
 // }
 
+p {
+    color: green;
+}
+
 @media screen and (max-width: 300px) {
     .test1 { ok: yes; }
 }

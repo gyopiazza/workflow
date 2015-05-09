@@ -63,6 +63,9 @@ module.exports = function(grunt) {
     // Compile only
     grunt.registerTask('compile', ['sass:dev', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main', 'uglify:plugins', 'notify:watch']);
 
+    // BrowserSync and Watch for live refresh
+    grunt.registerTask('live', ['browserSync', 'watch']);
+
     // Build and create a project package ready for publishing
     // Only compiled css/js files are included
     // Any file or folder starting with an underscore '_' will not be included
