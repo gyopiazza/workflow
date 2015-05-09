@@ -5,6 +5,7 @@
 <br/>
 
 **Clone repository**
+
 ```
 git clone https://github.com/gyopiazza/workflow.git project-name
 ```
@@ -12,6 +13,7 @@ git clone https://github.com/gyopiazza/workflow.git project-name
 <br/>
 
 **Install Node.js dependencies**
+
 ```
 npm install
 ```
@@ -27,6 +29,7 @@ Done :)
 <br/>
 
 **Compile CSS/JS and watch for changes**
+
 ```
 grunt
 ```
@@ -34,6 +37,7 @@ grunt
 <br/>
 
 **Compile only**
+
 ```
 grunt compile
 ```
@@ -42,6 +46,7 @@ grunt compile
 
 **Build for production**
 Production ready files are placed inside the 'build' folder
+
 ```
 grunt build
 ```
@@ -50,6 +55,7 @@ grunt build
 
 **Build for development**
 Production ready and dev files are placed inside the 'build' folder
+
 ```
 grunt build-dev
 ```
