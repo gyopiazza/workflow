@@ -20,10 +20,6 @@ npm install
 
 <br/>
 
-Done :)
-
-<br/>
-
 ## Usage
 
 <br/>
