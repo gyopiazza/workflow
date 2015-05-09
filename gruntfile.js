@@ -72,12 +72,6 @@ module.exports = function(grunt) {
     // All the files are included
     grunt.registerTask('build-dev', ['sass:dev', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main', 'uglify:plugins', 'clean:build', 'copy:dev', 'imagemin', 'compress', 'notify:build']);
 
-    // Enable all the hooks
-    grunt.registerTask('enable_hooks', ['rename:enable_hooks']);
-
-    // Disable all the hooks
-    grunt.registerTask('disable_hooks', ['rename:disable_hooks']);
-
     // Run the tests
     // grunt.registerTask('test', ['dalek']);
 
