@@ -2,10 +2,18 @@
    Main Styles
    ========================================================================== */
 
-.test {
-	ok: ok;
+// .test {
+// 	ok: ok;
+// }
+
+// .test2 {
+// 	ok: ok;
+// }
+
+@media screen and (max-width: 300px) {
+    .test1 { ok: yes; }
 }
 
-.test2 {
-	ok: ok;
+@media screen and (max-width: 300px) {
+    .test2 { ok: yes; }
 }

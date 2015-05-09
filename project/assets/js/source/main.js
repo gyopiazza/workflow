@@ -7,5 +7,5 @@
 	if (isTouchDevice) {
 		// FastClick.attach(document.body);
 	}
-	
+
 })(jQuery);

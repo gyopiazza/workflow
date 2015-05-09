@@ -58,16 +58,19 @@ module.exports = function(grunt) {
 
 
     // Compile and watch
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'watch']);
+    grunt.registerTask('default', ['sass:dev', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main', 'uglify:plugins', 'watch', 'notify:watch']);
 
-    // Compile only (useful when adding new js plugins)
-    grunt.registerTask('compile', ['sass', 'autoprefixer', 'cssmin', 'uglify']);
+    // Compile only
+    grunt.registerTask('compile', ['sass:dev', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main', 'uglify:plugins', 'notify:watch']);
 
-    // Build and create a theme package ready for publishing
-    grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'clean', 'copy:dist', 'imagemin', 'compress']);
+    // Build and create a project package ready for publishing
+    // Only compiled css/js files are included
+    // Any file or folder starting with an underscore '_' will not be included
+    grunt.registerTask('build', ['sass:build', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main_build', 'uglify:plugins_build', 'clean:build', 'copy:build', 'imagemin', 'compress', 'notify:build']);
 
-    // Build and create a theme package for development
-    grunt.registerTask('build-dev', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'clean', 'copy:dev', 'imagemin', 'compress']);
+    // Build and create a project package for development
+    // All the files are included
+    grunt.registerTask('build-dev', ['sass:dev', 'autoprefixer', 'combine_mq', 'cssmin', 'uglify:main', 'uglify:plugins', 'clean:build', 'copy:dev', 'imagemin', 'compress', 'notify:build']);
 
     // Enable all the hooks
     grunt.registerTask('enable_hooks', ['rename:enable_hooks']);

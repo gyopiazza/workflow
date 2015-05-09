@@ -1,1 +1,1 @@
-.test,.test2{ok:ok}
+@media screen and (max-width:300px){.test1,.test2{ok:yes}}

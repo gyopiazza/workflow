@@ -40,7 +40,6 @@
     "grunt-contrib-watch": "latest",
     "grunt-dalek": "latest",
     "grunt-newer": "latest",
-    "grunt-notify": "^0.4.1",
     "load-grunt-config": "latest"
   }
 }
