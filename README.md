@@ -2,6 +2,7 @@
 
 Workflow is a starting point for any webapp, which includes a SASS preprocessor, CSS minification, CSS autoprefixer, combine media queries, Javascript concatenation and minification, images optimization, server-side and client-side tests (PHPUnit and DalekJS) and system notifications.
 
+<br/>
 
 ## Getting started
 
