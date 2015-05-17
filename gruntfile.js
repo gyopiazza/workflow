@@ -10,7 +10,6 @@ module.exports = function(grunt) {
         root:   'project/',
         build:  'build/',
         css:    'assets/css/',
-        // sass:   'assets/sass/',
         js:     'assets/js/',
         img:    'assets/img/',
         hooks:  'hooks/',

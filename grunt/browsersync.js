@@ -6,7 +6,7 @@ module.exports = {
         },
         options: {
             // proxy: "localhost",
-            // host: "127.0.0.1",
+            // proxy: "http://localwebsite.dev/",
             watchTask: true,
             server: {
                 baseDir: "./project/"
