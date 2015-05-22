@@ -13,18 +13,21 @@ module.exports = function(grunt) {
         js:     'assets/js/',
         img:    'assets/img/',
         hooks:  'hooks/',
-        tests:  'tests/'
+        tests:  'tests/',
+        tasks:  'grunt/',
     };
 
 
     //////////////////////////////////////////////////////////////
 
 
+    // Autoload tasks from config.tasks
+
     var path = require('path');
 
     require('load-grunt-config')(grunt, {
         // path to task.js files, defaults to grunt dir
-        configPath: path.join(process.cwd(), 'grunt'),
+        configPath: path.join(process.cwd(), config.tasks),
 
         // auto grunt.initConfig
         init: true,
