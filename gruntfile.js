@@ -12,7 +12,6 @@ module.exports = function(grunt) {
         css:    'assets/css/',
         js:     'assets/js/',
         img:    'assets/img/',
-        hooks:  'hooks/',
         tests:  'tests/',
         tasks:  'grunt/',
     };

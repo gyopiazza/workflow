@@ -27,7 +27,7 @@ module.exports = {
             sourceMappingURL: 'plugins.js.map',
             sourceMapPrefix: 2
         },
-        src: '<%= config.root %><%= config.js %>vendor/**/*.js',
+        src: '<%= config.root %><%= config.js %>vendor/autoload/**/*.js',
         dest: '<%= config.root %><%= config.js %>plugins.js'
         // files: {
         //     '<%= config.js %>plugins.min.js': [
