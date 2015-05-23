@@ -39,7 +39,7 @@ module.exports = {
         options: {
             sourceMap: false
         },
-        src: '<%= config.root %><%= config.js %>vendor/**/*.js',
+        src: '<%= config.root %><%= config.js %>vendor/autoload/**/*.js',
         dest: '<%= config.root %><%= config.js %>plugins.js'
     },
 };
