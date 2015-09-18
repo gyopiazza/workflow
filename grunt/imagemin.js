@@ -2,7 +2,7 @@
 module.exports = {
     dist: {
         options: {
-            optimizationLevel: 7,
+            optimizationLevel: 8,
             progressive: true,
             interlaced: true
         },

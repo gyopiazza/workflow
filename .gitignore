@@ -17,8 +17,8 @@ _site
 *.vi
 *~
 
-# OS or Editor folders #
-########################
+# OS or Editor files/folders #
+##############################
 .DS_Store
 .DS_Store?
 ._*

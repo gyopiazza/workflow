@@ -1,4 +1,4 @@
-// Compress the theme
+// Compress the project folder into a zip package
 module.exports = {
     dist: {
         options: {

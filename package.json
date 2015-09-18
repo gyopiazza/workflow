@@ -3,8 +3,8 @@
   "capitalname": "Workflow",
   "version": "1.0.0",
   "copyright": "2015",
-  "license": "",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "project": {
     "uri": "https://github.com/gyopiazza/workflow",
     "description": "An advanced workflow setup for frontend projects.",

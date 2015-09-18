@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     //////////////////////////////////////////////////////////////
 
 
-    // Autoload tasks from config.tasks
+    // Autoload tasks from the config.tasks path
 
     var path = require('path');
 

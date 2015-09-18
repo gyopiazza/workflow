@@ -1,6 +1,28 @@
 # Workflow
 
-Workflow is a starting point for any webapp, which includes a SASS preprocessor, CSS minification, CSS autoprefixer, combine media queries, Javascript concatenation and minification, images optimization, browsersync for live refresh, client-side tests (DalekJS) and system notifications.
+Workflow is a very opinionated starting point for webapps, including many pre-configured features to let you quickly focus on your project.
+
+<br/>
+
+## Requirements
+
+- [NodeJS](https://nodejs.org)
+- [Grunt](http://gruntjs.com)
+
+<br/>
+
+## Features
+
+- HTML5 Boilerplate
+- SASS preprocessor
+- CSS minification
+- CSS autoprefixer
+- Combine media queries
+- Javascript concatenation and minification/obfuscation
+- Images optimization
+- BrowserSync for live reloading upon files change
+- Client-side tests ([DalekJS](http://dalekjs.com))
+- System notifications on tasks completion
 
 <br/>
 
@@ -46,6 +68,7 @@ grunt compile
 
 **Build for production**
 Production ready files are placed inside the 'build' folder
+Sass files and source maps are not included
 
 ```
 grunt build
@@ -55,6 +78,7 @@ grunt build
 
 **Build for development**
 Production ready and dev files are placed inside the 'build' folder
+Sass files and source maps are included
 
 ```
 grunt build-dev
@@ -68,3 +92,10 @@ Launch browserSync to test simultaneously on different devices
 ```
 grunt live
 ```
+
+<br/>
+
+## Ideas
+
+- Include [BackstopJS](https://garris.github.io/BackstopJS)
+- Dynamically append copyright for JS/CSS
