@@ -21,14 +21,12 @@ Workflow is a very opinionated starting point for webapps, including many pre-co
 - Javascript concatenation and minification/obfuscation
 - Images optimization
 - BrowserSync for live reloading upon files change
-- Client-side tests ([DalekJS](http://dalekjs.com))
+- Crossbrowser client-side tests with [DalekJS](http://dalekjs.com)
 - System notifications on tasks completion
 
 <br/>
 
 ## Getting started
-
-<br/>
 
 **Clone repository**
 
@@ -47,8 +45,6 @@ npm install
 <br/>
 
 ## Usage
-
-<br/>
 
 **Compile CSS/JS and watch for changes**
 
