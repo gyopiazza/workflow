@@ -62,8 +62,8 @@ grunt compile
 
 <br/>
 
-**Build for production**
-Production ready files are placed inside the 'build' folder
+**Build for production**<br/>
+Production ready files are placed inside the 'build' folder<br/>
 Sass files and source maps are not included
 
 ```
@@ -72,8 +72,8 @@ grunt build
 
 <br/>
 
-**Build for development**
-Production ready and dev files are placed inside the 'build' folder
+**Build for development**<br/>
+Production ready and dev files are placed inside the 'build' folder<br/>
 Sass files and source maps are included
 
 ```
@@ -82,7 +82,7 @@ grunt build-dev
 
 <br/>
 
-**Live reload**
+**Live reload**<br/>
 Launch browserSync to test simultaneously on different devices
 
 ```
