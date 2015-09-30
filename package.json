@@ -27,7 +27,7 @@
     "grunt": "latest",
     "grunt-autoprefixer": "latest",
     "grunt-browser-sync": "latest",
-    "grunt-combine-mq": "^0.9.0",
+    "grunt-combine-mq": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-compress": "latest",
     "grunt-contrib-copy": "latest",
@@ -39,7 +39,7 @@
     "grunt-contrib-watch": "latest",
     "grunt-dalek": "latest",
     "grunt-newer": "latest",
-    "grunt-notify": "^0.4.1",
+    "grunt-notify": "latest",
     "load-grunt-config": "latest"
   }
 }

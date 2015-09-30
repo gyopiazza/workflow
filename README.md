@@ -93,5 +93,8 @@ grunt live
 
 ## Ideas
 
+– Change the "autoload" assets compilation so that folders inside css/js are compiled into one file.
+  For example: all the js files inside js/source/somegroup will be compiled to js/somegroup.js
+– Create tasks to "publish" (copy) assets to the relevant dirs.
 - Include [BackstopJS](https://garris.github.io/BackstopJS)
 - Dynamically append copyright for JS/CSS
