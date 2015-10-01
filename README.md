@@ -36,10 +36,10 @@ git clone https://github.com/gyopiazza/workflow.git project-name
 
 <br/>
 
-**Install Node.js dependencies**
+**Install NodeJS dependencies**
 
 ```
-npm install
+npm update --save-dev
 ```
 
 <br/>
