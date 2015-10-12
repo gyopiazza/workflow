@@ -2,23 +2,17 @@
   "name": "workflow",
   "capitalname": "Workflow",
   "version": "1.0.0",
+  "description": "An advanced workflow setup for frontend projects.",
+  "author": "Gyo Piazza <gyopiazza@gmail.com>",
   "copyright": "2015",
   "license": "MIT",
   "private": false,
-  "project": {
-    "uri": "https://github.com/gyopiazza/workflow",
-    "description": "An advanced workflow setup for frontend projects.",
-    "author": "Gyo Piazza",
-    "authoruri": "http://giordanopiazza.com",
-    "tags": "",
-    "license": "",
-    "licenseuri": "",
-    "textdomain": "project",
-    "domainpath": "/languages"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/gyopiazza/workflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gyopiazza/workflow/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -38,7 +32,6 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-dalek": "*",
-    "grunt-newer": "*",
     "grunt-notify": "*",
     "load-grunt-config": "*"
   }
