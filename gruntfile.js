@@ -22,6 +22,13 @@ module.exports = function(grunt) {
 
     // Autoload tasks from the config.tasks path
 
+    // var fs = require('fs');
+    // var files = fs.readdirSync('./grunt');
+    // grunt.log.writeln(files);
+    // for (var i = 0, len = files.length; i < len; i++){
+    //     require('./grunt/'+files[i]);
+    // }
+
     var path = require('path');
 
     require('load-grunt-config')(grunt, {
@@ -33,6 +40,7 @@ module.exports = function(grunt) {
 
         // data passed into config. Can use with <%= config.element %>
         data: {
+            grunt: grunt,
             config: config
         },
 
@@ -66,6 +74,9 @@ module.exports = function(grunt) {
 
     // BrowserSync and Watch for live refresh
     grunt.registerTask('live', ['browserSync', 'watch']);
+
+    // Test new uglify
+    grunt.registerTask('uglify-test', ['uglify:dev1', 'uglify:dev2']);
 
     // Build and create a project package ready for publishing
     // Only compiled css/js files are included

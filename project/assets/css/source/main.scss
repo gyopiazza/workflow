@@ -2,22 +2,4 @@
    Main Styles
    ========================================================================== */
 
-// .test {
-// 	ok: ok;
-// }
-
-// .test2 {
-// 	ok: ok;
-// }
-
-p {
-    color: green;
-}
-
-@media screen and (max-width: 300px) {
-    .test1 { ok: yes; }
-}
-
-@media screen and (max-width: 300px) {
-    .test2 { ok: yes; }
-}
+.test { ok: ok; }

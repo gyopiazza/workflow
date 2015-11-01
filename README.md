@@ -2,14 +2,14 @@
 
 Workflow is a very opinionated starting point for webapps, including many pre-configured features to let you quickly focus on your project.
 
-<br/>
+<br>
 
 ## Requirements
 
 - [NodeJS](https://nodejs.org)
 - [Grunt](http://gruntjs.com)
 
-<br/>
+<br>
 
 ## Features
 
@@ -23,8 +23,9 @@ Workflow is a very opinionated starting point for webapps, including many pre-co
 - BrowserSync for live reloading upon files change
 - Crossbrowser client-side tests with [DalekJS](http://dalekjs.com)
 - System notifications on tasks completion
+– A very common .gitignore file
 
-<br/>
+<br>
 
 ## Getting started
 
@@ -34,15 +35,16 @@ Workflow is a very opinionated starting point for webapps, including many pre-co
 git clone https://github.com/gyopiazza/workflow.git project-name
 ```
 
-<br/>
+<br>
 
-**Install NodeJS dependencies**
+**Install NodeJS dependencies**<br>
+Using `update` instead of `install` allows us to download and substitute the `*` wildcards with the latest versions of the package.json file
 
 ```
 npm update --save-dev
 ```
 
-<br/>
+<br>
 
 ## Usage
 
@@ -52,7 +54,7 @@ npm update --save-dev
 grunt
 ```
 
-<br/>
+<br>
 
 **Compile only**
 
@@ -60,41 +62,42 @@ grunt
 grunt compile
 ```
 
-<br/>
+<br>
 
-**Build for production**<br/>
-Production ready files are placed inside the 'build' folder<br/>
+**Build for production**<br>
+Production ready files are placed inside the 'build' folder<br>
 Sass files and source maps are not included
 
 ```
 grunt build
 ```
 
-<br/>
+<br>
 
-**Build for development**<br/>
-Production ready and dev files are placed inside the 'build' folder<br/>
+**Build for development**<br>
+Production ready and dev files are placed inside the 'build' folder<br>
 Sass files and source maps are included
 
 ```
 grunt build-dev
 ```
 
-<br/>
+<br>
 
-**Live reload**<br/>
+**Live reload**<br>
 Launch browserSync to test simultaneously on different devices
 
 ```
 grunt live
 ```
 
-<br/>
+<br>
 
 ## Ideas
 
 – Change the "autoload" assets compilation so that folders inside css/js are compiled into one file.
   For example: all the js files inside js/source/somegroup will be compiled to js/somegroup.js
 – Create tasks to "publish" (copy) assets to the relevant dirs.
+– Create task to optimize the images on demand
 - Include [BackstopJS](https://garris.github.io/BackstopJS)
 - Dynamically append copyright for JS/CSS

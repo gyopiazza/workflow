@@ -28,12 +28,4 @@ module.exports = {
         ext: '.css'
       }]
     }
-	// dist: {
- //        options: {
- //            style: 'expanded',
- //        },
- //        files: {
- //            '<%= config.root %><%= config.css %>main.css': '<%= config.root %><%= config.css %>source/*.scss'
- //        }
- //    }
 };
