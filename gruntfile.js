@@ -6,15 +6,7 @@ module.exports = function(grunt) {
 
     // Configuration
 
-    var config = {
-        root:   'project/',
-        build:  'build/',
-        css:    'assets/css/',
-        js:     'assets/js/',
-        img:    'assets/img/',
-        tests:  'tests/',
-        tasks:  'grunt/',
-    };
+    var config = require('./config.js');
 
 
     //////////////////////////////////////////////////////////////
