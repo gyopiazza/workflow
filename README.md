@@ -93,6 +93,12 @@ grunt live
 
 <br>
 
+## TODO
+
+– Add more config options and maybe "extend" default values
+
+<br>
+
 ## Ideas
 
 – Change the "autoload" assets compilation so that folders inside css/js are compiled into one file.

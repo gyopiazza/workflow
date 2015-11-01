@@ -1,8 +1,7 @@
 // Uglify to concat, minify, and make source maps
 module.exports = function(grunt, options) {
 
-    var fs = require('fs'),
-        path = require('path');
+    var fs = require('fs'), path = require('path');
 
     function getFiles(srcpath) {
       return fs.readdirSync(srcpath).filter(function(file) {
@@ -57,17 +56,20 @@ module.exports = function(grunt, options) {
         }
     }
 
-    // console.log(files);
+    var dev_options = {
+        // sourceMap: '<%= config.root %><%= config.js %>main.js.map',
+        sourceMap: function(name){ return name; },
+        sourceMapIncludeSources: true,
+        // sourceMappingURL: 'main.js.map',
+        sourceMapPrefix: 2
+    };
 
 
     return {
+
+        // All the files in assets/js/source are minified separately to assets/js
         dev1: {
-            options: {
-                sourceMap: '<%= config.root %><%= config.js %>main.js.map',
-                sourceMapIncludeSources: true,
-                // sourceMappingURL: 'main.js.map',
-                sourceMapPrefix: 2
-            },
+            options: dev_options,
             expand: true,
             cwd: '<%= config.root %><%= config.js %>source/',
             src: '*.js',
@@ -76,55 +78,14 @@ module.exports = function(grunt, options) {
             flatten: true,
             filter: 'isFile',
         },
+
+        // All the folders in assets/js/source are minified separately to assets/js
         dev2: {
-            // options: {
-                // sourceMap: '<%= config.root %><%= config.js %>main.js.map',
-                // sourceMappingURL: 'main.js.map',
-                // sourceMapPrefix: 2
-            // },
-            // src: '<%= config.root %><%= config.js %>source/**/*.js',
-            // dest: '<%= config.root %><%= config.js %>main.js',
-            // files: {
-            //     '<%= config.js %>/main.min.js': [
-            //         '<%= config.js %>/source/main.js'
-            //     ]
-            // },
-
-            // files: grunt.file.expandMapping(['<%= config.root %><%= config.js %>source/autoload1/*.js', '<%= config.root %><%= config.js %>source/autoload2/*.js'], '<%= config.root %><%= config.js %>', {
-            //     rename: function(destBase, destPath) {
-            //         return destBase+destPath.replace('.js', '.min.js');
-            //     }
-            // }),
-
+            options: dev_options,
             files: autoload_files,
-
-            // files: {
-            //     '<%= config.root %><%= config.js %>/autoload1.js': [
-            //         '<%= config.root %><%= config.js %>/source/autoload1/*.js',
-            //         // '<%= config.root %><%= config.js %>/source/autoload1/1.js',
-            //         // '<%= config.root %><%= config.js %>/source/autoload1/2.js'
-            //     ]
-            // }
-
-            // files: grunt.file.expandMapping('**/*.js', '<%= config.root %><%= config.js %>', {
-            //   cwd: '<%= config.root %><%= config.js %>source',
-            //   rename: function(destBase, destPath) {
-            //     console.log('destBase: '+destBase);
-            //     grunt.log.writeln('destBase: '+destBase);
-            //     return destBase + destPath.replace(/\.js$/, '.min.js');
-            //   }
-            // })
-
-            // files: grunt.file.expandMapping(['<%= config.root %><%= config.js %>source/**/*.js'], '<%= config.root %><%= config.js %>/', {
-            //     expand: true,
-            //     flatten: false,
-            //     rename: function(destBase, destPath) {
-            //         grunt.log.writeln('destBase: '+destBase);
-            //         grunt.log.writeln('destPath: '+destPath);
-            //         return destBase+destPath.replace('.js', '.min.js');
-            //     }
-            // })
         },
+
+        ///
 
         main: {
             options: {
