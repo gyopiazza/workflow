@@ -96,6 +96,7 @@ grunt live
 ## TODO
 
 – Add more config options and maybe "extend" default values
+– Add comment banners to CSS/JS files
 
 <br>
 
