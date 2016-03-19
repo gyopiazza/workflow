@@ -1,6 +1,6 @@
 # Workflow
 
-Workflow is a very opinionated starting point for webapps, including many pre-configured features to let you quickly focus on your project.
+Workflow is a starting point for any website or webapp. It includes many pre-configured features to let you quickly focus on your project.
 
 <br>
 
@@ -38,7 +38,7 @@ git clone https://github.com/gyopiazza/workflow.git project-name
 <br>
 
 **Install NodeJS dependencies**<br>
-Using `update` instead of `install` allows us to download and substitute the `*` wildcards with the latest versions of the package.json file
+Using `update` instead of `install` allows us to download and substitute the `*` wildcards with the latest versions of the `package.json` file
 
 ```
 npm update --save-dev
@@ -106,5 +106,6 @@ grunt live
   For example: all the js files inside js/source/somegroup will be compiled to js/somegroup.js
 – Create tasks to "publish" (copy) assets to the relevant dirs.
 – Create task to optimize the images on demand
+– Create task to convert/resize/crop bulk images to different formats (jpg/png/gif)
 - Include [BackstopJS](https://garris.github.io/BackstopJS)
 - Dynamically append copyright for JS/CSS
