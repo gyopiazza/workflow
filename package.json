@@ -28,11 +28,11 @@
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-jshint": "*",
-    "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-dalek": "*",
     "grunt-notify": "*",
+    "grunt-sass": "^1.1.0",
     "load-grunt-config": "*"
   }
 }
