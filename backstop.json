@@ -1,0 +1,52 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "My Homepage",
+      "url": "http://localhost/ikea-terracitas",
+      "hideSelectors": [],
+      "removeSelectors": [
+        "#carbonads-container"
+      ],
+      "selectors": [
+        ".main-header",
+        ".boxes",
+        "footer",
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../tests/visual/bitmaps_reference",
+    "bitmaps_test": "../../tests/visual/bitmaps_test",
+    "compare_data": "../../tests/visual/bitmaps_test/compare.json",
+    "casper_scripts": "../../tests/visual/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}

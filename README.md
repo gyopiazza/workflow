@@ -97,6 +97,7 @@ grunt live
 
 – Add more config options and maybe "extend" default values
 – Add comment banners to CSS/JS files
+– Better configure BackstopJS (usage: from within node_modules/backstopjs, npm run reference OR npm run test)
 
 <br>
 
@@ -107,5 +108,5 @@ grunt live
 – Create tasks to "publish" (copy) assets to the relevant dirs.
 – Create task to optimize the images on demand
 – Create task to convert/resize/crop bulk images to different formats (jpg/png/gif)
-- Include [BackstopJS](https://garris.github.io/BackstopJS)
+- Include/Configure [BackstopJS](https://garris.github.io/BackstopJS)
 - Dynamically append copyright for JS/CSS

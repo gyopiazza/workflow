@@ -16,10 +16,12 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "backstopjs": "^1.2.1",
     "dalek-browser-chrome": "*",
     "dalek-reporter-html": "*",
     "grunt": "*",
     "grunt-autoprefixer": "*",
+    "grunt-backstop": "^0.1.5",
     "grunt-browser-sync": "*",
     "grunt-combine-mq": "*",
     "grunt-contrib-clean": "*",

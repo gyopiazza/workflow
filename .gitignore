@@ -42,6 +42,8 @@ nbproject
 node_modules
 build
 reports
+tests/visual/bitmaps_reference
+tests/visual/bitmaps_test
 
 # Sublime FTP config #
 ######################
