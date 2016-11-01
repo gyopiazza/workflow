@@ -9,7 +9,8 @@
     "url": "https://github.com/gyopiazza/workflow"
   },
   "todo": [
-    "Change sprite.js so that it saves the SCSS in the src dir before the compilation, and the HTML somewhere else"
+    "Change sprite.js so that it saves the SCSS in the src dir before the compilation, and the HTML somewhere else",
+    "Move the HTML from the root to the src"
   ],
   "scripts": {
     "clean": "rm -f dist/{css/*,js/*,img/*}",
@@ -26,7 +27,7 @@
     "watch:images": "onchange \"src/img\" -- npm run build:images",
     "watch:all": "npm-run-all -p serve watch:css watch:js watch:images",
     "build:css": "npm run scss && npm run autoprefixer",
-    "build:js": "./node_modules/.bin/webpack",
+    "build:js": "./node_modules/.bin/webpack && npm run copyright",
     "build:images": "npm run sprite && npm run imagemin",
     "build:clean": "npm run clean && npm run build:all",
     "build:all": "npm run build:css && npm run build:js && npm run build:images",

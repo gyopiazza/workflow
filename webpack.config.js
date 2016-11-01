@@ -1,9 +1,11 @@
 var webpack = require('webpack');
-var plugins = [];
+// var plugins = [];
 
-if (process.argv.indexOf('--minimize') !== -1) {
-  plugins.push(new webpack.optimize.UglifyJsPlugin());
-}
+// // if (process.argv.indexOf('--minimize') !== -1) {
+//   plugins.push(new webpack.optimize.UglifyJsPlugin({
+//     compress: true
+//   }));
+// // }
 
 module.exports = {
   entry: './src/js/app.js',
@@ -17,6 +19,6 @@ module.exports = {
       { enforce: "pre", test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/ }
     ]
   },
-  plugins: plugins
+  plugins: [new webpack.optimize.UglifyJsPlugin()]
 };
 
