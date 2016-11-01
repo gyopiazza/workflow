@@ -1,9 +1,3 @@
-# Ignore docs files #
-########################
-_gh_pages
-_site
-.ruby-version
-
 # Numerous always-ignore extensions #
 ########################
 *.diff
@@ -19,10 +13,12 @@ _site
 
 # OS or Editor files/folders #
 ##############################
+node_modules
+npm-debug.log
 .DS_Store
 .DS_Store?
-._*
 Thumbs.db
+._*
 .cache
 .project
 .settings
@@ -36,15 +32,15 @@ nbproject
 .idea
 *.sass-cache
 *.ruby-version
+.ruby-version
+.sass-cache
+_gh_pages
+_site
+sftp-config.json
 
-# Folders to ignore #
+# Custom stuff to ignore #
 ########################
-node_modules
-build
-reports
-tests/visual/bitmaps_reference
-tests/visual/bitmaps_test
-
-# Sublime FTP config #
-######################
-# sftp-config.json
+dist
+tests
+docs
+styleguide

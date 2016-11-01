@@ -1,19 +1,11 @@
+# This file is for unifying the coding style for different editors and IDEs
 # editorconfig.org
 
-# top-most EditorConfig file
 root = true
 
 [*]
-end_of_line = lf
-indent_style = space
 charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[.htaccess]
-indent_style = space
-indent_size = 4
-
-[*.json]
-indent_style = space
 indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true

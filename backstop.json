@@ -1,4 +1,5 @@
 {
+  "id": "prod_test",
   "viewports": [
     {
       "name": "phone",
@@ -18,35 +19,29 @@
   ],
   "scenarios": [
     {
-      "label": "My Homepage",
-      "url": "http://localhost/ikea-terracitas",
+      "label": "BackstopJS Homepage",
+      "url": "http://localhost:3000",
       "hideSelectors": [],
-      "removeSelectors": [
-        "#carbonads-container"
-      ],
+      "removeSelectors": [],
       "selectors": [
-        ".main-header",
-        ".boxes",
-        "footer",
-        "body"
+        "body",
+        ".foo",
+        ".Tour"
       ],
       "readyEvent": null,
       "delay": 500,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "onBefore.js",
-      "onReadyScript": "onReady.js"
+      "misMatchThreshold" : 0.1
     }
   ],
   "paths": {
-    "bitmaps_reference": "../../tests/visual/bitmaps_reference",
-    "bitmaps_test": "../../tests/visual/bitmaps_test",
-    "compare_data": "../../tests/visual/bitmaps_test/compare.json",
-    "casper_scripts": "../../tests/visual/casper_scripts"
+    "bitmaps_reference": "tests/visual/bitmaps_reference",
+    "bitmaps_test": "tests/visual/bitmaps_test",
+    "casper_scripts": "tests/visual/casper_scripts",
+    "html_report": "tests/visual/html_report",
+    "ci_report": "tests/visual/ci_report"
   },
-  "engine": "phantomjs",
-  "report": ["CLI", "browser"],
-  "cliExitOnFail": false,
   "casperFlags": [],
-  "debug": false,
-  "port": 3001
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": true
 }
