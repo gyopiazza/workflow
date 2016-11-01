@@ -1,3 +1,4 @@
+// NOT CURRENTLY IN USE (YET)
 module.exports = {
 
     // The root of your project (relative to the gruntfile)

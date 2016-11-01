@@ -41,6 +41,5 @@ sftp-config.json
 # Custom stuff to ignore #
 ########################
 dist
-tests
 docs
 styleguide

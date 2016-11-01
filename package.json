@@ -4,19 +4,20 @@
   "description": "An advanced workflow setup for frontend projects.",
   "author": "Gyo Piazza <gyopiazza@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyopiazza/workflow"
+  },
   "todo": [
     "Change sprite.js so that it saves the SCSS in the src dir before the compilation, and the HTML somewhere else"
   ],
   "scripts": {
-    "postinstall": "npm run build:all && npm run watch:all",
     "clean": "rm -f dist/{css/*,js/*,img/*}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "lint": "eslint src/js",
-    "uglify_old": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
     "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -m -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
     "imagemin": "imagemin src/img/* -o dist/img",
-    "icons--to-delete": "svgo -f src/img/icons && mkdir -p dist/img && svg-sprite-generate -d src/img/icons -o dist/img/icons.svg",
     "sprite": "node scripts/sprite.js",
     "serve": "browser-sync start --server --files \"dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\"",
     "copyright": "node scripts/copyright-banner.js",
@@ -24,19 +25,19 @@
     "watch:js": "onchange \"src/js\" -- npm run build:js",
     "watch:images": "onchange \"src/img\" -- npm run build:images",
     "watch:all": "npm-run-all -p serve watch:css watch:js watch:images",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "./node_modules/.bin/webpack",
+    "build:images": "npm run sprite && npm run imagemin",
+    "build:clean": "npm run clean && npm run build:all",
+    "build:all": "npm run build:css && npm run build:js && npm run build:images",
+    "build:prod": "TODO: BUILD FOR PRODUCTION (images compression, copyright-banner go here...)",
     "test:unit": "./node_modules/.bin/mocha tests/unit",
     "test:integration": "./node_modules/.bin/mocha tests/integration",
     "test:visual": "./node_modules/.bin/backstop test",
     "test:visual:ref": "./node_modules/.bin/backstop reference",
-    "build:css": "npm run scss && npm run autoprefixer",
-    "build:js_old": "npm run lint && npm run uglify",
-    "build:js": "./node_modules/.bin/webpack",
-    "build:images": "npm run sprite && npm run imagemin",
-    "build:all": "npm run build:css && npm run build:js && npm run build:images",
-    "build:clean": "npm run clean && npm run build:css && npm run build:js && npm run build:images",
-    "build:prod": "TODO: BUILD FOR PRODUCTION (images compression, copyright-banner go here...)",
     "docs": "jsdoc src/js -r -d docs",
-    "styleguide": "./node_modules/.bin/documentjs"
+    "styleguide": "./node_modules/.bin/documentjs",
+    "postinstall": "npm run build:all && npm run watch:all"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
