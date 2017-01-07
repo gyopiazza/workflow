@@ -16,9 +16,12 @@ module.exports = {
   },
   module: {
     loaders: [
-      { enforce: "pre", test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/ }
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      }
     ]
-  },
-  plugins: [new webpack.optimize.UglifyJsPlugin()]
+  }
+  // plugins: [new webpack.optimize.UglifyJsPlugin()]
 };
-

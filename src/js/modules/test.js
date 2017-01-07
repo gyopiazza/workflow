@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * Test module.
  * @module test

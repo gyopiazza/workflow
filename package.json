@@ -10,7 +10,8 @@
   },
   "todo": [
     "Change sprite.js so that it saves the SCSS in the src dir before the compilation, and the HTML somewhere else",
-    "Move the HTML from the root to the src"
+    "Move the HTML from the root to src/html",
+    "Change watch:images so that they are optimised directly in the src folder and not the dist. Faster and better."
   ],
   "scripts": {
     "clean": "rm -f dist/{css/*,js/*,img/*}",
@@ -25,23 +26,25 @@
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "watch:js": "onchange \"src/js\" -- npm run build:js",
     "watch:images": "onchange \"src/img\" -- npm run build:images",
-    "watch:all": "npm-run-all -p serve watch:css watch:js watch:images",
+    "watch__old": "npm-run-all -p serve watch:css watch:js watch:images",
+    "watch": "node scripts/watch.js",
     "build:css": "npm run scss && npm run autoprefixer",
-    "build:js": "./node_modules/.bin/webpack && npm run copyright",
+    "build:js": "./node_modules/.bin/webpack --progress",
     "build:images": "npm run sprite && npm run imagemin",
-    "build:clean": "npm run clean && npm run build:all",
-    "build:all": "npm run build:css && npm run build:js && npm run build:images",
-    "build:prod": "TODO: BUILD FOR PRODUCTION (images compression, copyright-banner go here...)",
+    "build:clean": "npm run clean && npm run build",
+    "build": "npm run build:css && npm run build:js && npm run build:images",
+    "build:production": "TODO: BUILD FOR PRODUCTION (images compression, copyright-banner should go here...)",
     "test:unit": "./node_modules/.bin/mocha tests/unit",
     "test:integration": "./node_modules/.bin/mocha tests/integration",
     "test:visual": "./node_modules/.bin/backstop test",
     "test:visual:ref": "./node_modules/.bin/backstop reference",
     "docs": "jsdoc src/js -r -d docs",
     "styleguide": "./node_modules/.bin/documentjs",
-    "postinstall": "npm run build:all && npm run watch:all"
+    "postinstall": "npm run build && npm run watch:all"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "babel-preset-es2015": "^6.18.0",
     "backstopjs": "^2.0.6",
     "browser-sync": "^2.12.8",
     "chai": "^3.5.0",
@@ -64,6 +67,8 @@
     "svg-sprite": "^1.3.6",
     "svgo": "^0.7.1",
     "uglify-js": "^2.6.2",
-    "webpack": "^1.13.3"
-  }
+    "webpack": "^1.13.3",
+    "webpagetest": "^0.3.4"
+  },
+  "dependencies": {}
 }

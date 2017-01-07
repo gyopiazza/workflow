@@ -4,6 +4,8 @@
  * @module app
  * @version 0.1
  */
+
+// import test from './modules/test'
 var test = require('./modules/test');
 
 /** Testing 'test' module */
@@ -15,4 +17,5 @@ test.do('something');
 
   doc.classList.remove('no-js');
   doc.classList.add('js');
+
 }());
