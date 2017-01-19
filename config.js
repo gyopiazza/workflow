@@ -1,7 +1,7 @@
 // NOT CURRENTLY IN USE (YET)
 module.exports = {
 
-    // The root of your project (relative to the gruntfile)
+    // The root of your project (relative to the package.json)
     root:   'src/',
 
     // The production-ready optimized version of the project
@@ -13,7 +13,6 @@ module.exports = {
     img:    'assets/img/',
     svg:    'assets/svg/',
 
-    // Other paths (relative to the gruntfile)
+    // Other paths (relative to the root)
     tests:  'tests/',
-    tasks:  'grunt/',
 };
